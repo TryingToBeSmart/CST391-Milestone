@@ -16,6 +16,11 @@ I would like to develop an app that is a guide for all of the movies and shows o
 
 **Nice but not necessary yet:**
 - (Maybe someday) As a streaming service, I want to have a list of what movies and/or shows consumers want to watch, so that I can make them available (and I might pay money for that data - unless I already know everything I want to know).
+- I want to be able to select the streaming services that I have, so that I'm only notified about media that is available to me.
+- As a user, I want to search for media based on the actors who are in it, so that I can watch media with specific actors.
+- As a user, I want to be able to mark media as watched, so that I can keep track of what I have seen already.
+- As a user, I want to be able to rate media that I've watched based on certain criteria, so that I can keep track of what I like.
+- As a user, I want to be notified about media that is similar to other media that I like, so that I can watch media that I enjoy.
 
 ### ER Diagram:
 
