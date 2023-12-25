@@ -1,4 +1,4 @@
-# CST391-Milestone
+# CST391 Milestone Project
 ### Goal:
 Design 2 web applications that implement a REST API back-end services using Express and NodeJS.  1 app uses the Angular JS Framework and the other uses the React JS Framework.  A product must be supported that includes at least 3 different data types in the MySQL DB and implement CRUD operations. 
 
