@@ -23,7 +23,7 @@ I would like to develop an app that is a guide for all of the movies and shows o
 - As a user, I want to be notified about media that is similar to other media that I like, so that I can watch media that I enjoy.
 
 ### ER Diagram:
-![ER Diagram](/Images/Schema image.png)
+![ER Diagram](./Images/Schema image.png)
 
 ### UI Wireframes:
 
