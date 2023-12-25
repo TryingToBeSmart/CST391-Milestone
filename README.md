@@ -26,6 +26,7 @@ I would like to develop an app that is a guide for all of the movies and shows o
 ![ER Diagram](Images/Schema_image.png)
 
 ### UI Wireframes:
+![UI Wireframe](Images/Wireframe.drawio.png)
 
 ### UML Classes:
 ![Class UML](Images/Class_UML.drawio.png)
