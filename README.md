@@ -24,7 +24,7 @@ I would like to develop an app that is a guide for all of the movies and shows o
 
 ### ER Diagram:
 ![ER Diagram](https://github.com/TryingToBeSmart/CST391-Milestone/blob/main/Images/Schema%20image.png)
-![](Images/Schema image.png)
+![ER Diagram](Images/Schema image.png)
 
 ### UI Wireframes:
 
