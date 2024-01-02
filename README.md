@@ -2,6 +2,22 @@
 ### Goal:
 Design 2 web applications that implement a REST API back-end services using Express and NodeJS.  1 app uses the Angular JS Framework and the other uses the React JS Framework.  A product must be supported that includes at least 3 different data types in the MySQL DB and implement CRUD operations. 
 
+## Milestone 2: Refined Project Proposal 2024/1/1 Due 2024/1/14
+### Introduce my REST API
+The "products" for my app are the Media and Users.  The Media, at this time, consists of: id, title, type (movie or series), and releaseDate.  
+
+The following will explain the API endpoints for Media: <br>
+GET /media/ is for returning a list of all the Media in the database. <br>
+POST /media/ is for adding new Media to the database. <br>
+PUT /media/:id is for updating the Media with the specific id#. <br>
+DELETE /media/:id is for deleting the Media with the specific id#.
+
+The following will explain the API endpoints for Users: <br>
+GET /users/ is for returning a list of all the Users in the database. <br>
+POST /users/ is for adding new Users to the database. <br>
+PUT /users/:id is for updating the User with the specific id#. <br>
+DELETE /users/:id is for deleting the User with the specific id#.
+
 ## Milestone 1: Project Proposal 2023/12/24 
 
 ### Introduction:
