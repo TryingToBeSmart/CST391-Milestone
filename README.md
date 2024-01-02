@@ -8,12 +8,14 @@ The "products" for my app are the Media and Users.  The Media, at this time, con
 
 The following will explain the API endpoints for Media: <br>
 GET /media/ is for returning a list of all the Media in the database. <br>
+GET /media/:title is for returning a list of the Media in the database with the specific title. <br>
 POST /media/ is for adding new Media to the database. <br>
 PUT /media/:id is for updating the Media with the specific id#. <br>
 DELETE /media/:id is for deleting the Media with the specific id#.
 
 The following will explain the API endpoints for Users: <br>
 GET /users/ is for returning a list of all the Users in the database. <br>
+GET /users/:id is for returning the User in the database with the specific id#. <br>
 POST /users/ is for adding new Users to the database. <br>
 PUT /users/:id is for updating the User with the specific id#. <br>
 DELETE /users/:id is for deleting the User with the specific id#.
@@ -39,13 +41,13 @@ I would like to develop an app that is a guide for all of the movies and shows o
 - As a user, I want to be notified about media that is similar to other media that I like, so that I can watch media that I enjoy.
 
 ### ER Diagram:
-![ER Diagram](Images/Schema_image.png)
+![ER Diagram](public/images/Schema_image.png)
 
 ### UI Wireframes:
-![UI Wireframe](Images/Wireframe.drawio.png)
+![UI Wireframe](public/images/Wireframe.drawio.png)
 
 ### UML Classes:
-![Class UML](Images/Class_UML.drawio.png)
+![Class UML](public/images/Class_UML.drawio.png)
 
 ### Risks:
 
