@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
 
 var indexRouter = require('./index/indexRoutes');
 
