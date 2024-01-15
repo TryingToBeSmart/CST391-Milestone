@@ -10,7 +10,7 @@ I used the same folder structure as the activities suggested.  I created folders
 I followed the activity and used a logger middleware. 
 
 I have working APIs for all 5 entities. All CRUD operations are working.   
-[![Here is my Loom video.]({public/images/milestone3_loom_video_image.png})]({https://www.loom.com/share/61cdd920e9314c4ba4efac272de1b847?sid=8e02da76-eaf2-4079-b81a-b009a725739f} "Here is my Loom video.")
+[![Here is my Loom video.]({src/public/images/milestone3_loom_video_image.png})]({https://www.loom.com/share/61cdd920e9314c4ba4efac272de1b847?sid=8e02da76-eaf2-4079-b81a-b009a725739f} "Here is my Loom video.")
 
 Adding Angular looks like the next step.  I'm looking forward to it!
 
