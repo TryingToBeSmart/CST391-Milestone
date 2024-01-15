@@ -12,7 +12,7 @@ I followed the activity and used a logger middleware.
 I have working APIs for all 5 entities. All CRUD operations are working.
 
 Here is my Loom video
-[![Here is my Loom video.](src\public\images\milestone3_loom_video_image.png)](https://www.loom.com/share/61cdd920e9314c4ba4efac272de1b847?sid=8e02da76-eaf2-4079-b81a-b009a725739f "Here is my Loom video.")
+[![Here is my Loom video.](src/public/images/milestone3_loom_video_image.png)](https://www.loom.com/share/61cdd920e9314c4ba4efac272de1b847?sid=8e02da76-eaf2-4079-b81a-b009a725739f "Here is my Loom video.")
 
 Adding Angular looks like the next step.  I'm looking forward to it!
 
@@ -55,10 +55,10 @@ I would like to develop an app that is a guide for all of the movies and shows o
 - As a user, I want to be notified about media that is similar to other media that I like, so that I can watch media that I enjoy.
 
 ### ER Diagram:
-![ER Diagram](src\public\images\Schema_image.png)
+![ER Diagram](src/public/images/Schema_image.png)
 
 ### UI Wireframes:
-![UI Wireframe](src\public\images\Wireframe.drawio.png)
+![UI Wireframe](src/public/images/Wireframe.drawio.png)
 
 ### UML Classes:
 ![Class UML](src/public/images/Class_UML.drawio.png)
