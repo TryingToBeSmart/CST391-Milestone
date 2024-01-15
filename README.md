@@ -2,6 +2,18 @@
 ### Goal:
 Design 2 web applications that implement a REST API back-end services using Express and NodeJS.  1 app uses the Angular JS Framework and the other uses the React JS Framework.  A product must be supported that includes at least 3 different data types in the MySQL DB and implement CRUD operations. 
 
+## Milestone 3: Complete Working Rest API 2024/1/14
+I needed to make 2 tables that worked as intermediaries. The userMediaList has items that the user wants to know about.  It contains the ids as foreign keys from both the allMedia and Users tables.  The availableMedia has items that are currently showing on streamingServices.  It contains the ids as foreign keys from both the allMedia and streamingServices tables.  I was thinking of just joining the availableMedia and userMediaList to get the media that is available that a user wants to know about, but I might consider making 1 more entity called availableMediaOnUserMediaList...or something like that.
+
+I used the same folder structure as the activities suggested.  I created folders for each entity: allMedia, availableMedia, streamingServices, userMediaList, and users.  Each folder contains a controller, dao, model, queries, and routes .ts file.  This produces a MVC design pattern.  
+
+I followed the activity and used a logger middleware. 
+
+I have working APIs for all 5 entities. All CRUD operations are working.   
+[![Here is my Loom video.]({public/images/milestone3_loom_video_image.png})]({https://www.loom.com/share/61cdd920e9314c4ba4efac272de1b847?sid=8e02da76-eaf2-4079-b81a-b009a725739f} "Here is my Loom video.")
+
+Adding Angular looks like the next step.  I'm looking forward to it!
+
 ## Milestone 2: Refined Project Proposal 2024/1/1 Due 2024/1/14
 ### Introduce my REST API
 The "products" for my app are the Media and Users.  The Media, at this time, consists of: id, title, type (movie or series), and releaseDate.  
