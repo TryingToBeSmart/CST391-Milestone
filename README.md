@@ -53,13 +53,13 @@ I would like to develop an app that is a guide for all of the movies and shows o
 - As a user, I want to be notified about media that is similar to other media that I like, so that I can watch media that I enjoy.
 
 ### ER Diagram:
-![ER Diagram](public/images/Schema_image.png)
+![ER Diagram](app/public/images/Schema_image.png)
 
 ### UI Wireframes:
-![UI Wireframe](public/images/Wireframe.drawio.png)
+![UI Wireframe](app/public/images/Wireframe.drawio.png)
 
 ### UML Classes:
-![Class UML](public/images/Class_UML.drawio.png)
+![Class UML](app/public/images/Class_UML.drawio.png)
 
 ### Risks:
 
