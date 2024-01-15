@@ -61,7 +61,7 @@ I would like to develop an app that is a guide for all of the movies and shows o
 ![UI Wireframe](src\public\images\Wireframe.drawio.png)
 
 ### UML Classes:
-![Class UML](src\public\images\Class_UML.drawio.png)
+![Class UML](src/public/images/Class_UML.drawio.png)
 
 ### Risks:
 
