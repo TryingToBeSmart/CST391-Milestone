@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { AllMedia } from '../models/all-media.model';
 
 @Component({
   selector: 'app-display-all-media',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './display-all-media.component.css'
 })
 export class DisplayAllMediaComponent {
-
+  addToUserMediaList(mediaItem: AllMedia) {
+    console.log('Added to user media list:', mediaItem);
+  }
+  @Input() allMedia: AllMedia[] = [];
 }

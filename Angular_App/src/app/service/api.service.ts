@@ -11,7 +11,13 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
+  //Get all media
   public getAllMedia(): Observable<any> {
     return this.httpClient.get<AllMedia[]>(`${this.hostUrl}/allMedia`);
+  }
+
+  //Get all user's media list
+  getUserMediaListByUserId(userId: number): Observable<any> {
+    return this.httpClient.get(`${this.hostUrl}/userMediaList/user/${userId}`);
   }
 }
