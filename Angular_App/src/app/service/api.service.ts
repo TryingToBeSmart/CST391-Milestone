@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AllMedia } from '../models/all-media.model';
+import { UserMedia } from '../models/user-media-list.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +17,24 @@ export class ApiService {
     return this.httpClient.get<AllMedia[]>(`${this.hostUrl}/allMedia`);
   }
 
+  public getAllMediaById(mediaId: number): Observable<any> {
+    return this.httpClient.get<AllMedia>(`${this.hostUrl}/allMedia/${mediaId}`);
+  }
+
   //Get all user's media list
   getUserMediaListByUserId(userId: number): Observable<any> {
-    return this.httpClient.get(`${this.hostUrl}/userMediaList/user/${userId}`);
+    return this.httpClient.get<UserMedia[]>(`${this.hostUrl}/userMediaList/user/${userId}`);
+  }
+
+  //Add media to user's list
+  addUserMediaList(userMedia: UserMedia): Observable<any> {
+    return this.httpClient.post(`${this.hostUrl}/userMediaList`, userMedia);
+  }
+
+  //Remove media from user's list
+  removeUserMediaList(userMedia: UserMedia): Observable<any> {
+    return this.httpClient.delete(`${this.hostUrl}/userMediaList`, {
+      body: userMedia,
+    });
   }
 }

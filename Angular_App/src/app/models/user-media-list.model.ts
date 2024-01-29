@@ -1,4 +1,4 @@
-export interface UserMediaList{
+export interface UserMedia{
   userId: number,
   allMediaId: number
 }

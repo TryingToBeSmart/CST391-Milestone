@@ -6,13 +6,15 @@
       <th>Type</th>
       <th>Release Date</th>
     </tr>
+  </thead>
+  <tbody>
     <tr *ngFor="let mediaItem of allMedia">
       <td>
-        <button (click)="addToUserMediaList(mediaItem)"><i class="fa-solid fa-user-plus"></i></button>
+        <app-add-to-user-list-button [mediaItem]="mediaItem" [user]="user"></app-add-to-user-list-button>
       </td>
       <td>{{ mediaItem.title }}</td>
       <td>{{ mediaItem.type }}</td>
-      <td>{{ mediaItem.releaseDate | date : 'MM/dd/yyyy' }}</td>
+      <td>{{ mediaItem.releaseDate | date : "MM/dd/yyyy" }}</td>
     </tr>
-  </thead>
+  </tbody>
 </table>

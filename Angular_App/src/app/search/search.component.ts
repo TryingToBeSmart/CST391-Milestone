@@ -7,20 +7,6 @@ import { AllMedia } from '../models/all-media.model';
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
 })
-export class SearchComponent implements OnInit{
-  allMedia: AllMedia[] = [];
+export class SearchComponent {
 
-  constructor(private apiService: ApiService) {}
-
-  async ngOnInit() {
-    this.apiService.getAllMedia().subscribe(
-      allMedia => {
-        this.allMedia = allMedia;
-        console.log(allMedia);
-      },
-      error => {
-        console.error(error);
-      }
-    );
-  }
 }

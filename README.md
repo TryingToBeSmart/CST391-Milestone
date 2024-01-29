@@ -4,7 +4,7 @@ Design 2 web applications that implement a REST API back-end services using Expr
 
 ## Milestone 4: Angular front end 2024/1/28
 
-
+[![Video](images/video.png)](https://www.loom.com/share/deab3b439ae541c6b049b7cbe6a419e4?sid=0b2e2122-72ac-444b-bd71-441dc17414c2 "Here is my Loom video.")
 
 ## Milestone 3: Complete Working Rest API 2024/1/14
 I needed to make 2 tables that worked as intermediaries. The userMediaList has items that the user wants to know about.  It contains the ids as foreign keys from both the allMedia and Users tables.  The availableMedia has items that are currently showing on streamingServices.  It contains the ids as foreign keys from both the allMedia and streamingServices tables.  I was thinking of just joining the availableMedia and userMediaList to get the media that is available that a user wants to know about, but I might consider making 1 more entity called availableMediaOnUserMediaList...or something like that.
