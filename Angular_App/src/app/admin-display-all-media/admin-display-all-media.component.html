@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Add To List</th>
+      <th>Title</th>
+      <th>Type</th>
+      <th>Release Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let mediaItem of allMedia">
+      <td>
+        <button (click)="selectedMedia(mediaItem)">Edit</button>
+      </td>
+      <td>{{ mediaItem.title }}</td>
+      <td>{{ mediaItem.type }}</td>
+      <td>{{ mediaItem.releaseDate | date : "MM/dd/yyyy" }}</td>
+    </tr>
+  </tbody>
+</table>

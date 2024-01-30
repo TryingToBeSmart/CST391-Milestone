@@ -1,0 +1,83 @@
+<div *ngIf="!selectedMedia">
+  <!-- Display AdminDisplayAllMediaComponent until a selection is made -->
+  <app-admin-display-all-media
+    (mediaSelected)="onMediaSelected($event)"
+  ></app-admin-display-all-media>
+</div>
+
+<div *ngIf="selectedMedia">
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+    <div class="form-group">
+      <label for="inputId">ID</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputId"
+        formControlName="id"
+        readonly
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="inputTitle">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputTitle"
+        formControlName="title"
+        required
+      />
+    </div>
+    <div
+      *ngIf="
+        editForm.get('title')?.hasError('required') &&
+        editForm.get('title')?.touched
+      "
+      class="text-danger"
+    >
+      Title is required.
+    </div>
+
+    <div class="form-group">
+      <label for="inputType">Type</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputType"
+        formControlName="type"
+        required
+      />
+    </div>
+    <div
+      *ngIf="
+        editForm.get('type')?.hasError('required') &&
+        editForm.get('type')?.touched
+      "
+      class="text-danger"
+    >
+      Type is required.
+    </div>
+
+    <div class="form-group">
+      <label for="inputReleaseDate">Release Date</label>
+      <input
+        type="date"
+        class="form-control"
+        id="inputReleaseDate"
+        formControlName="releaseDate"
+        required
+      />
+    </div>
+    <div
+      *ngIf="
+        editForm.get('releaseDate')?.hasError('required') &&
+        editForm.get('releaseDate')?.touched
+      "
+      class="text-danger"
+    >
+      Release Date is required.
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+  </form>
+</div>

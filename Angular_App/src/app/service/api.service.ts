@@ -38,4 +38,14 @@ export class ApiService {
       body: userMedia,
     });
   }
+
+  //Add media to the AllMedia table
+  createAllMedia(allMedia: AllMedia): Observable<{ id: number }> {
+    return this.httpClient.post<{ id: number }>(`${this.hostUrl}/allMedia`, allMedia);
+  }
+
+  //Edit AllMedia
+  editAllMedia(allMedia: AllMedia): Observable<{ id: number }> {
+    return this.httpClient.put<{ id: number }>(`${this.hostUrl}/allMedia/${allMedia.id}`, allMedia);
+  }
 }

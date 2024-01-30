@@ -4,3 +4,4 @@ export interface AllMedia {
   type: string;
   releaseDate: Date;
 }
+

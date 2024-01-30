@@ -1,0 +1,64 @@
+<form [formGroup]="createForm" (submit)="onSubmit()">
+  <div class="form-group">
+    <label for="inputTitle">Title</label>
+    <input
+      type="text"
+      class="form-control"
+      id="inputTitle"
+      formControlName="title"
+      required
+    />
+    <div
+      *ngIf="
+        createForm.get('title')?.hasError('required') &&
+        createForm.get('title')?.touched
+      "
+      class="text-danger"
+    >
+      Title is required.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputType">Type</label>
+    <input
+      type="text"
+      class="form-control"
+      id="inputType"
+      formControlName="type"
+      required
+    />
+    <div
+      *ngIf="
+        createForm.get('type')?.hasError('required') &&
+        createForm.get('type')?.touched
+      "
+      class="text-danger"
+    >
+      Type is required.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputReleaseDate">Release Date</label>
+    <input
+      type="date"
+      class="form-control"
+      id="inputReleaseDate"
+      formControlName="releaseDate"
+      required
+    />
+    <div
+      *ngIf="
+        createForm.get('releaseDate')?.hasError('required') &&
+        createForm.get('releaseDate')?.touched
+      "
+      class="text-danger"
+    >
+      Release Date is required.
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!createForm.valid">Submit</button>
+
+</form>
