@@ -1,4 +1,4 @@
-<div *ngIf="allMediaDetails.length > 0">
+<div *ngIf="userMediaList.length > 0">
   <table class="table">
     <thead>
       <tr>
@@ -9,16 +9,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let mediaDetails of allMediaDetails">
-        <td><button (click)="removeUserMedia(mediaDetails)"><i class="fa-solid fa-circle-minus"></i></button></td>
-        <td>{{ mediaDetails.title }}</td>
-        <td>{{ mediaDetails.type }}</td>
-        <td>{{ mediaDetails.releaseDate | date : "MM/dd/yyyy" }}</td>
+      <tr *ngFor="let userMedia of userMediaList">
+        <td><button (click)="removeUserMedia(userMedia)"><i class="fa-solid fa-circle-minus"></i></button></td>
+        <td>{{ userMedia.title }}</td>
+        <td>{{ userMedia.type }}</td>
+        <td>{{ userMedia.releaseDate  | date : "MM/dd/yyyy"}}</td>
       </tr>
     </tbody>
   </table>
 </div>
-<div>  {{allMediaDetails | json}} </div>
-<div *ngIf="allMediaDetails.length === 0">
+<div *ngIf="userMediaList.length === 0">
   <p>No items in the user's media list.</p>
 </div>

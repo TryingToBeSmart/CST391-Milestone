@@ -14,6 +14,7 @@ import { DisplayAllMediaComponent } from './display-all-media/display-all-media.
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { UserMediaListComponent } from './user-media-list/user-media-list.component';
 import { AddToUserListButtonComponent } from './add-to-user-list-button/add-to-user-list-button.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [

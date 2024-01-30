@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { AllMedia } from '../models/all-media.model';
 import { UserMedia } from '../models/user-media-list.model';
 
@@ -18,6 +18,7 @@ export class ApiService {
   }
 
   public getAllMediaById(mediaId: number): Observable<any> {
+    console.log(`api getAllMediaById, mediaId: ${mediaId}`);
     return this.httpClient.get<AllMedia>(`${this.hostUrl}/allMedia/${mediaId}`);
   }
 
