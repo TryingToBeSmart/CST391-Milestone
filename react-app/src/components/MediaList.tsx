@@ -1,43 +1,54 @@
 // import { useNavigate } from "react-router-dom";
-import { getAllMedia } from "../apiServices/allMediaService";
+import * as allMediaService from "../apiServices/allMediaService";
 import { Media } from "../interfaces/Media";
 import Card from "./Card";
 import { useEffect, useState } from "react";
 
-// interface Props extends Media {
-//   onClick(mediaId: number, navigator: NavigateFunction): unknown;
-//   buttonText: string;
-//   buttonAction?: string;
-// }
+interface Props {
+  searchQuery: string | null;
+}
 
-const MediaList = () => {
-  //   console.log("Props MediaList: ", props);
+const MediaList = (props: Props) => {
+  console.log("Props MediaList: ", props);
   //   const navigator = useNavigate();
-  const [mediaList, setMediaList] = useState([]);
-  //   const [currentlySelectedMediaId, setCurrentlySelectedMediaId] = useState(0);
+  const [mediaList, setMediaList] = useState<Media[]>([]);
+  const [selectedMediaId, setSelectedMediaId] = useState(0);
+  // const [refresh, setRefresh] = useState(false);
 
-  // eslint-disable-next-line prefer-const
-  let refresh = false;
+  // log the selectedMediaId every time it's changed
+  useEffect(() => {
+    console.log("Selected Id: ", selectedMediaId);
+  }, [selectedMediaId]);
 
   useEffect(() => {
     loadMedia();
-  }, [refresh]);
+  }, []);
+
+  // const handleRefreshClick = () => {
+  //   // Toggle refresh state
+  //   setRefresh(!refresh);
+  // };
 
   const loadMedia = async () => {
     try {
-      const response = await getAllMedia();
+      const response = await allMediaService.getAllMedia();
       setMediaList(response);
     } catch (error) {
       console.error("Error fetching media:", error);
     }
   };
 
-  //   const handleSelection = (mediaId: number) => {
-  //     console.log("Selected Id: ", mediaId);
-  //     props.onClick(mediaId, navigator);
-  //   };
+  const handleMediaClick = (mediaId: number) => {
+    setSelectedMediaId(mediaId);
+  };
 
-  const allMedia = mediaList.map((media: Media) => {
+  const filteredMedia = props.searchQuery
+    ? mediaList.filter((media) =>
+        media.title.toLowerCase().includes(props.searchQuery!.toLowerCase())
+      )
+    : mediaList;
+
+  const allMedia = filteredMedia.map((media: Media) => {
     return (
       <Card
         key={media.id}
@@ -46,12 +57,15 @@ const MediaList = () => {
         releaseDate={media.releaseDate}
         buttonText="button"
         imgURL={media.imgURL}
-        // onClick={handleSelection}
+        onClick={() => handleMediaClick(media.id || 0)}
       />
     );
   });
-
-  return <div className="container">{allMedia}</div>;
+  return (
+    <>
+      <div className="container">{allMedia}</div>;
+    </>
+  );
 };
 
 export default MediaList;

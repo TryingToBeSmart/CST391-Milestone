@@ -6,10 +6,10 @@ export const allMediaQueries = {
 	   WHERE streamingguide.allmedia.type = ?;`,
 	readAllMediaByTypeSearch:
 		`SELECT * FROM streamingguide.allmedia
-	   WHERE streamingguide.allmedia.type LIKE ?;`,
+	   WHERE streamingguide.allmedia.type LIKE LOWER(?);`,
 	readAllMediaByTitleSearch:
 		`SELECT * FROM streamingguide.allmedia
-	   WHERE streamingguide.allmedia.title LIKE ?;`,
+	   WHERE streamingguide.allmedia.title LIKE LOWER(?);`,
 	readAllMediaById:
 		`SELECT * FROM streamingguide.allmedia
 	   WHERE streamingguide.allmedia.id = ?;`,

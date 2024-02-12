@@ -34,6 +34,7 @@ export const getAllMedia: RequestHandler = async (req: Request, res: Response) =
 export const getAllMediaById: RequestHandler = async (req: Request, res: Response) => {
     try {
         const allMedia = await AllMediaDao.getAllMediaById(parseInt(req.params.id));
+        console.log('AllMedia Id: ', req.params.id);
         res.status(200).json(allMedia);
     } catch (error) {
         console.error('[allMedia.controller][getAllMediaById][Error]', error);

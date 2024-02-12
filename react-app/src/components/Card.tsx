@@ -1,12 +1,22 @@
+import { Link } from "react-router-dom";
 import { Media } from "../interfaces/Media";
 
 interface Props extends Media {
   buttonText: string;
   buttonAction?: string;
+  onClick?: () => void;
 }
 
 const Card = (props: Props) => {
   const releaseDate = new Date(props.releaseDate);
+
+  const handleOnClick = () => {
+    // Call onClick function if it exists
+    if (props.onClick) {
+      props.onClick();
+    }
+  };
+
   return (
     <div className="card" style={{ width: "18rem" }}>
       <img
@@ -27,9 +37,13 @@ const Card = (props: Props) => {
           </p>
         </div>
 
-        <a href={props.buttonAction || "#"} className="btn btn-primary">
+        <Link
+          to={props.buttonAction || "#"}
+          className="btn btn-primary"
+          onClick={handleOnClick}
+        >
           {props.buttonText}
-        </a>
+        </Link>
       </div>
     </div>
   );
