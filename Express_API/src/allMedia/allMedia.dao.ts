@@ -47,8 +47,9 @@ export const getAllMediaByTitleSearch = async (search: string): Promise<AllMedia
  * @param allMedia The media object to be created.
  */
 export const createAllMedia = async (allMedia: AllMedia): Promise<OkPacket> => {
+    console.log("inserting: ", allMedia);
     return execute<OkPacket>(allMediaQueries.createAllMedia,
-        [allMedia.title, allMedia.type, allMedia.releaseDate]);
+        [allMedia.title, allMedia.type, allMedia.releaseDate, allMedia.imgURL]);
 };
 
 /**
@@ -57,7 +58,7 @@ export const createAllMedia = async (allMedia: AllMedia): Promise<OkPacket> => {
  */
 export const updateAllMedia = async (allMedia: AllMedia): Promise<OkPacket> => {
     return execute<OkPacket>(allMediaQueries.updateAllMedia,
-        [allMedia.title, allMedia.type, allMedia.releaseDate, allMedia.id]);
+        [allMedia.title, allMedia.type, allMedia.releaseDate, allMedia.id, allMedia.imgURL]);
 };
 
 /**

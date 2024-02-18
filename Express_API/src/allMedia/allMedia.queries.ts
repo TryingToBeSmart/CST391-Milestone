@@ -14,9 +14,9 @@ export const allMediaQueries = {
 		`SELECT * FROM streamingguide.allmedia
 	   WHERE streamingguide.allmedia.id = ?;`,
 	createAllMedia:
-		`INSERT INTO streamingguide.allmedia(title, type, releaseDate) VALUES(?,?,?);`,
+		`INSERT INTO streamingguide.allmedia(title, type, releaseDate, imgURL) VALUES(?,?,?,?);`,
 	updateAllMedia:
-		`UPDATE streamingguide.allmedia SET title=?, type=?, releaseDate=? WHERE id = ?;`,
+		`UPDATE streamingguide.allmedia SET title=?, type=?, releaseDate=?, imgURL=? WHERE id = ?;`,
 	deleteAllMedia:
 		`DELETE FROM streamingguide.allmedia where id = ?;`,
 }

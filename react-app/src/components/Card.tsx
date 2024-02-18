@@ -1,9 +1,7 @@
-import { Link } from "react-router-dom";
 import { Media } from "../interfaces/Media";
 
 interface Props extends Media {
   buttonText: string;
-  buttonAction?: string;
   onClick?: () => void;
 }
 
@@ -37,13 +35,9 @@ const Card = (props: Props) => {
           </p>
         </div>
 
-        <Link
-          to={props.buttonAction || "#"}
-          className="btn btn-primary"
-          onClick={handleOnClick}
-        >
+        <button className="btn btn-primary" onClick={handleOnClick}>
           {props.buttonText}
-        </Link>
+        </button>
       </div>
     </div>
   );

@@ -12,8 +12,8 @@ const DisplayMedia = () => {
 
   return (
     <>
-      <Search onSubmit={handleSearchSubmit} />
-      <MediaList searchQuery={searchQuery} />;
+      <Search onChange={handleSearchSubmit} />
+      <MediaList searchQuery={searchQuery} />
     </>
   );
 };

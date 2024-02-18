@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 interface Props {
   searchQuery: string | null;
+  buttonName?: string | null;
 }
 
 const MediaList = (props: Props) => {
@@ -13,7 +14,6 @@ const MediaList = (props: Props) => {
   //   const navigator = useNavigate();
   const [mediaList, setMediaList] = useState<Media[]>([]);
   const [selectedMediaId, setSelectedMediaId] = useState(0);
-  // const [refresh, setRefresh] = useState(false);
 
   // log the selectedMediaId every time it's changed
   useEffect(() => {
@@ -23,11 +23,6 @@ const MediaList = (props: Props) => {
   useEffect(() => {
     loadMedia();
   }, []);
-
-  // const handleRefreshClick = () => {
-  //   // Toggle refresh state
-  //   setRefresh(!refresh);
-  // };
 
   const loadMedia = async () => {
     try {
@@ -55,7 +50,7 @@ const MediaList = (props: Props) => {
         title={media.title}
         type={media.type}
         releaseDate={media.releaseDate}
-        buttonText="button"
+        buttonText={props.buttonName || "Button"}
         imgURL={media.imgURL}
         onClick={() => handleMediaClick(media.id || 0)}
       />
@@ -63,7 +58,7 @@ const MediaList = (props: Props) => {
   });
   return (
     <>
-      <div className="container">{allMedia}</div>;
+      <div className="container">{allMedia}</div>
     </>
   );
 };

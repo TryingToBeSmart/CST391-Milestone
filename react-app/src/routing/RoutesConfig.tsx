@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import DisplayMedia from "../components/DisplayMedia";
 import Home from "../components/Home";
 import MyWatchList from "../components/MyWatchList";
-import AdminDisplay from "../components/AdminDisplay";
+import AdminDisplay from "../components/admin/AdminDisplay";
 
 const RoutesConfig = () => {
   return (
