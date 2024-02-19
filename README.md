@@ -2,6 +2,10 @@
 ### Goal:
 Design 2 web applications that implement a REST API back-end services using Express and NodeJS.  1 app uses the Angular JS Framework and the other uses the React JS Framework.  A product must be supported that includes at least 3 different data types in the MySQL DB and implement CRUD operations. 
 
+## Milestone 5: React Front End 2024/2/18
+[![Video](images/Milestone5_video.png)](https://www.loom.com/share/bdaa07ee804a40bc88e716e5a5e935a1?sid=c113ab18-084b-4e70-9048-19e76dca6b40 "Here is my Loom video.")
+
+
 ## Milestone 4: Angular front end 2024/1/28
 
 [![Video](images/video.png)](https://www.loom.com/share/e54be2bbe6784902ab9b4adc9fd5fd53?sid=876accb6-539e-4866-94c4-255d72c8562d "Here is my Loom video.")

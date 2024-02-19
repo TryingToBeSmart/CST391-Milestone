@@ -1,17 +1,24 @@
 import { Media } from "../interfaces/Media";
 
 interface Props extends Media {
-  buttonText: string;
-  onClick?: () => void;
+  buttonText?: string;
+  onClick?: (media: Media) => void;
 }
 
 const Card = (props: Props) => {
   const releaseDate = new Date(props.releaseDate);
 
   const handleOnClick = () => {
+    console.log(
+      "Card: Selected media:",
+      props.id,
+      "Selected Title:",
+      props.title
+    );
+
     // Call onClick function if it exists
     if (props.onClick) {
-      props.onClick();
+      props.onClick(props);
     }
   };
 
@@ -36,7 +43,7 @@ const Card = (props: Props) => {
         </div>
 
         <button className="btn btn-primary" onClick={handleOnClick}>
-          {props.buttonText}
+          {props.buttonText || "Button"}
         </button>
       </div>
     </div>

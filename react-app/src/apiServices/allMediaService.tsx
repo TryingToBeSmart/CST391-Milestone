@@ -54,6 +54,7 @@ export const createAllMedia = async (media: Media) => {
 };
 
 export const editAllMediaById = async (media: Media) => {
+  console.log("Calling Edit API for:", media);
   try {
     const response = await dataSource.put(`/allMedia/${media.id}`, media);
     return response;
